@@ -28,7 +28,7 @@ function makeStep(): void {
   }
 }
 
-function speedUp(event: object): void {
+function speedUp(event: any): void {
   if (event.target.tagName === 'BUTTON') {
     return;
   }
