@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader with RxJs</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --white: #fff;
+        --border: 2px solid var(--white);
+        --font: 'Roboto Condensed', sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: #434ee0;
+        font-family: var(--font);
+        color: var(--white);
+        font-size: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      #status {
+        position: absolute;
+        min-height: 30px;
+        top: -80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #container {
+        position: relative;
+        margin-top: 15px;
+        border: var(--border);
+        width: 80vw;
+        height: 5vh;
+      }
+
+      #progress {
+        height: 100%;
+        width: 0%;
+        background-color: var(--white);
+        transition: all .25s ease-out;
+      }
+
+      #loading {
+        position: absolute;
+        top: 90vh;
+        left: 83vw;
+      }
+
+      #restart {
+        color: var(--white);
+        font-size: 0.9em;
+        background-color: transparent;
+        cursor: pointer;
+        border: var(--border);
+        font-family: var(--font);
+        width: 150px;
+        height: 40px;
+      }
+    </style>
+</head>
+<body>
+    <div id="container">
+      <div id="status">0%</div>
+      <div id="progress"></div>
+    </div>
+  <span id="loading">Click to speed up!</span>
+
+  <script src="main.js"></script>
+</body>
+</html>
